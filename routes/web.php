@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PerpustakaanController;
+use App\Http\Controllers\castController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,8 @@ Route::get('/', [PerpustakaanController::class, 'anggota'])->name('get_anggota')
 Route::get('/buku', [PerpustakaanController::class, 'buku'])->name('get_buku');
 
 Route::get('/petugas', [PerpustakaanController::class, 'petugas'])->name('get_petugas');
+
+Route::get('/about', function() {
+    return view('layouts.master');
+})->name('get_table');
+   
